@@ -65,16 +65,16 @@ input.oninput = function() {
             }
         }
 	    if (matchescount !== 0) {
-	        slbacount.innerHTML = matchescount;
-	        slbamatch.innerHTML = outputmatch;
+	        ipsoscount.innerHTML = matchescount;
+	        ipsosmatch.innerHTML = outputmatch;
 
 	    } else {
-            slbacount.innerHTML = 0;
-	        slbamatch.innerHTML = "N/A";
+            ipsoscount.innerHTML = 0;
+	        ipsosmatch.innerHTML = "N/A";
 	    }
 
 	    /* Wisdom of S'lba */
-	    textset = wisdomofslba.split(" ");
+	    textset = slba.split(" ");
         matchescount = 0;
         outputmatch = "";
         teststr = "";
@@ -124,12 +124,12 @@ input.oninput = function() {
             }
         }
 	    if (matchescount !== 0) {
-	        ipsoscount.innerHTML = matchescount;
-	        ipsosmatch.innerHTML = outputmatch;
+	        slbacount.innerHTML = matchescount;
+	        slbamatch.innerHTML = outputmatch;
 
 	    } else {
-          ipsoscount.innerHTML = 0;
-	        ipsosmatch.innerHTML = "N/A";
+          slbacount.innerHTML = 0;
+	        slbamatch.innerHTML = "N/A";
 	    }
   }, 666);
 }
