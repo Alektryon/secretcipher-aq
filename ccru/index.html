@@ -1,0 +1,54 @@
+<html>
+<head>
+  <title>CCRU-AQ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <link rel="icon" href="favicon.png" type="image/png" sizes="16x16">
+  <link rel="stylesheet" href="styles.css">
+  <!--<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">-->
+</head>
+<body onload="toggleBoxes()">
+<noscript>JavaScript Required</noscript>
+<div class="top" id="head">
+<h2><center>Alphanumeric Qabbala</center></h2>
+<form onsubmit="return false;"><input type="text" id="input" placeholder="Input Test Phrase" spellcheck="false" autofocus></form>
+<dl>
+<div><dt>Sum (AQ)</dt><dd id="result">0</dd></div>
+<hr>
+<div><dt>Matches</dt></div>
+<div><dt><br></dt></div>
+<div><dt><b style="text-align: left;">CCRU Writings 1997-2003</b></dt></div>
+<div><dt><input type="checkbox" id="showidentity"  onclick="toggleBoxes()" style="height:19px;width:19px;">1. Id(entity)</dt><dd id="identitycount">0</dd></div>
+<div><dt><input type="checkbox" id="showcthulhu"  onclick="toggleBoxes()" style="height:19px;width:19px;">2. The Cthulhu Club</dt><dd id="cthulhucount">0</dd></div>
+<div><dt><input type="checkbox" id="showaxsys"  onclick="toggleBoxes()" style="height:19px;width:19px;">3. AOE/Axsys</dt><dd id="axsyscount">0</dd></div>
+<div><dt><input type="checkbox" id="showatlantis"  onclick="toggleBoxes()" style="height:19px;width:19px;">4. Black Atlantis</dt><dd id="atlantiscount">0</dd></div>
+<div><dt><input type="checkbox" id="showbarker"  onclick="toggleBoxes()" style="height:19px;width:19px;">5. Barker</dt><dd id="barkercount">0</dd></div>
+<div><dt><input type="checkbox" id="showsarkon"  onclick="toggleBoxes()" style="height:19px;width:19px;">6. Sarkon</dt><dd id="sarkoncount">0</dd></div>
+<div><dt><input type="checkbox" id="showcybergothic"  onclick="toggleBoxes()" style="height:19px;width:19px;">7. Cybergothic</dt><dd id="cybergothiccount">0</dd></div>
+<div><dt><input type="checkbox" id="showpandemonium"  onclick="toggleBoxes()" style="height:19px;width:19px;">8. Pandemonium</dt><dd id="pandemoniumcount">0</dd></div>
+<hr>
+
+<div class="out" id="identity" style="display:block;"><strong>1. Id(entity)</strong><div><ol id="identitymatch">N/A</ol></div></div>
+<div class="out" id="cthulhu" style="display:block;"><strong>2. The Cthulhu Club</strong><div><ol id="cthulhumatch">N/A</ol></div></div>
+<div class="out" id="axsys" style="display:block;"><strong>3. AOE/Axsys</strong><div><ol id="axsysmatch">N/A</ol></div></div>
+<div class="out" id="atlantis" style="display:block;"><strong>4. Black Atlantis</strong><div><ol id="atlantismatch">N/A</ol></div></div>
+<div class="out" id="barker" style="display:block;"><strong>5. Barker</strong><div><ol id="barkermatch">N/A</ol></div></div>
+<div class="out" id="sarkon" style="display:block;"><strong>6. Sarkon</strong><div><ol id="sarkonmatch">N/A</ol></div></div>
+<div class="out" id="cybergothic" style="display:block;"><strong>7. Cybergothic</strong><div><ol id="cybergothicmatch">N/A</ol></div></div>
+<div class="out" id="pandemonium" style="display:block;"><strong>8. Pandemonium</strong><div><ol id="pandemoniummatch">N/A</ol></div></div>
+</dl>
+
+<nav>
+	<a href="../index.html"> <span>Back</span></a>
+	<a href="https://www.urbanomic.com/book/ccru-writings-1997-2003/" target="_blank"><span>Get the Book</span></a>
+</nav>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="boxes.js"></script>
+<script src="ccru.js"></script>
+<script src="results.js"></script>
+<script src="../cipher.js"></script>
+</body>
+</html>

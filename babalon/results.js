@@ -14,8 +14,8 @@ input.oninput = function() {
 
 	    result.innerHTML = a;
 
-	    /* Fortitude */
-	    textset = fortitude.split(" ");
+        /* Fortitude */
+        textset = fortitude.split(" ");
         matchescount = 0;
         outputmatch = "";
         teststr = "";
@@ -64,14 +64,14 @@ input.oninput = function() {
                 }
             }
         }
-	    if (matchescount !== 0) {
-	        fortcount.innerHTML = matchescount;
-	        fortmatch.innerHTML = outputmatch;
+        if (matchescount !== 0) {
+            fortcount.innerHTML = matchescount;
+            fortmatch.innerHTML = outputmatch;
 
-	    } else {
+        } else {
             fortcount.innerHTML = 0;
-	        fortmatch.innerHTML = "N/A";
-	    }
+            fortmatch.innerHTML = "N/A";
+        }
 
 	    /* XLIX */
 	    textset = liberxlix.split(" ");
@@ -131,6 +131,66 @@ input.oninput = function() {
           xlixcount.innerHTML = 0;
 	        xlixmatch.innerHTML = "N/A";
 	    }
+		
+	    /* ashtaroth */
+	    textset = ashtaroth.split(" ");
+        matchescount = 0;
+        outputmatch = "";
+        teststr = "";
+        testword = "";
+        testchar = "";
+        teststrval = 0;
+        testweight = 0;
+        if(a!==0) {
+            for(textpos=0;textpos<textset.length;textpos++) {
+                teststr = "";
+                teststrval = 0;
+                testword = "";
+                if(textpos+20>textset.length) {
+                    offend = textset.length;
+                } else {
+                    offend = textpos+20;
+                }
+                for(offset=textpos;offset<offend;offset++) {
+                    testweight = 0;
+                    testword = textset[offset];
+                    for(subpos=0;subpos<testword.length;subpos++) {
+                        testchar = testword.substring(subpos,subpos+1);
+                        if(typeof cipher[testchar] !== 'undefined') {
+                            testweight = parseInt(testweight) + parseInt(cipher[testchar]);
+                        } else if(testchar == parseInt(testchar)) {
+                            testweight = parseInt(testweight) + parseInt(testchar);
+                        }
+                    }
+                    if(parseInt(testword)==testword)
+                    {
+                      testweight = parseInt(testword);
+                    }
+                    teststrval = parseInt(teststrval) + parseInt(testweight);
+                    if(teststr)
+                    {
+                      teststr = teststr + " " + testword;
+                    }
+                    else
+                    {
+                      teststr = testword;
+                    }
+                    if(teststrval==a) {
+                        matchescount++;
+                        outputmatch += "<li>"+teststr+"</li>";
+                    }
+                }
+            }
+        }
+	    if (matchescount !== 0) {
+	        ashtarothcount.innerHTML = matchescount;
+	        ashtarothmatch.innerHTML = outputmatch;
+
+	    } else {
+			ashtarothcount.innerHTML = 0;
+	        ashtarothmatch.innerHTML = "N/A";
+	    }
+        
   }, 666);
 }
 

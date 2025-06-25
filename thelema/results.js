@@ -529,10 +529,10 @@ input.oninput = function() {
                 teststr = "";
                 teststrval = 0;
                 testword = "";
-                if(textpos+28>textset.length) {
+                if(textpos+20>textset.length) {
                     offend = textset.length;
                 } else {
-                    offend = textpos+28;
+                    offend = textpos+20;
                 }
                 for(offset=textpos;offset<offend;offset++) {
                     testweight = 0;
